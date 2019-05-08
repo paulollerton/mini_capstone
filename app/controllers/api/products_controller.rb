@@ -5,4 +5,9 @@ class Api::ProductsController < ApplicationController
     render "all_products.json.jbuilder"
   end  
 
+  def first_product_action
+    @product = Product.first
+    render "first_product.json.jbuilder"
+  end
+
 end
