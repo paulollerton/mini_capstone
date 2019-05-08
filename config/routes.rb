@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  get "/products" => "api/products#all_products_action" 
+
+
+
   # EXAMPLE HTML ROUTE
   # get "/photos" => "photos#index"
 
