@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
 
-  get "/products" => "api/products#all_products_action" 
+  namespace :api do
 
-  get "/first_product" => "api/products#first_product_action" 
+  get "/products" => "products#index" 
 
+  get "/product/:id" => "products#show" 
 
+  post "/product" => "products#create"
 
-  # EXAMPLE HTML ROUTE
-  # get "/photos" => "photos#index"
+  patch "/product/:id" => "products#update"
 
-  # EXAMPLE JSON ROUTE WITH API NAMESPACE
-  # namespace :api do
-  #   get "/photos" => "photos#index"
-  # end
+  delete "/product/:id" => "products#destroy"
+
+  end
+
 end
+
+
