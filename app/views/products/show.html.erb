@@ -1,0 +1,12 @@
+<h1> Product: </h1>
+
+<h2>Name: <%=@product.name%></h2>
+<h3>Price: <%=@product.price%></h3>
+<h4>Description: <%=@product.description%></h4>
+<h5>Dscounted: <%=@product.is_discounted?%></h5>
+<h6>Supplier: <%=@product.supplier%></h6>
+<img src="<%= @product.image_url %>" alt=""><br>
+
+<a href="/products">All Products</a>
+<a data-method="delete" rel="nofollow">Delete</a>
+

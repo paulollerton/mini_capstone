@@ -1,0 +1,25 @@
+<hi>Edit Product</hi>
+
+<form action="/products/<%= @product.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <div>
+    Name: <input type="text" name="name" value="<%=@product.name%>">
+  </div>
+  <div>
+    Price: <input type="number" name="price" value="<%=@product.price%>">
+  </div>
+  <div>
+    Description: <input type="text" name="description" value="<%=@product.description%>">
+  </div>
+  <!-- <div>
+    Discounted? <input type="text" name="is_discounted?" value="<%=@product.is_discounted?%>">
+  </div> -->
+  <!-- <div>
+    Supplier: <input type="text" name="supplier" value="<%=@product.supplier%>">
+  </div> -->
+  <div>
+    Image URL: <input type="text" name="image_url" value="<%=@product.supplier%>">
+  </div>
+  <input type="submit" value="Update Product">
+
+</form>
